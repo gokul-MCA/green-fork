@@ -1,0 +1,109 @@
+.specials-container,
+.menus-container,
+.orders-container {
+  margin-block: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.special-foods-heading,
+.menu-foods-heading,
+.orders-heading {
+  text-align: center;
+}
+
+.special-foods-list-of-items {
+  display: flex;
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.menu-foods-list-of-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.special-items,
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.special-image-container {
+  width: min(24vw,300px);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu-image-container {
+  width: min(30vw, 600px);
+  aspect-ratio: 4 / 3;
+  border-radius: 0%;
+  overflow: hidden;
+  position: relative;
+}
+
+.special-image,
+.menu-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center; /* Ensures the image is centered */
+  margin-bottom: 1rem; /* Add some space between the image and text */
+}
+
+.special-image {
+  border-radius: 50%;
+}
+
+.menu-image {
+  border-radius: 0%;
+}
+
+/* media query for small screens  */
+
+@media (width <= 600px) {
+  .specials-container,
+  .menus-container {
+    margin-block: 4rem;
+  }
+
+  .special-image-container,
+  .menu-image-container {
+    border-radius: 10%;
+  }
+  .special-image,
+  .menu-image {
+    border-radius: 10%;
+  }
+
+  .special-foods-list-of-items {
+    flex-direction: column;
+  }
+  .menu-foods-list-of-items {
+    grid-template-columns: 1fr;
+  }
+
+  .special-image-container {
+    /* height: 10vh;
+    min-height: 20px;
+    min-width: 20px;
+    width: 10vw; */
+    height: 60%;
+    width: 60%;
+  }
+  .menu-image-container {
+    height: 60%;
+    width: 60%;
+  }
+}

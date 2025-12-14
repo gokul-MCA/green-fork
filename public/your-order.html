@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Orders - Green Fork</title>
+    <meta
+      name="description"
+      content="Book your order online with Green Fork – natural, flavorful meals made fresh. Dine-in or take away, always clean and eco-friendly."
+    />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!-- bootstrap -->
+
+    <!-- Treats JS as an ES module: supports import/export, scoped variables, runs
+    after HTML is parsed. so don't need "DEFER" -->
+    <script type="module" src="./js/your-order.js"></script>
+
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body data-bs-theme="dark" class="">
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top bg-body" id="navbar">
+        <div class="container">
+          <!-- logo -->
+          <a class="navbar-brand mb-0 h1" href="/public">Green Fork</a>
+
+          <!-- hamburger button -->
+          <buttons
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </buttons>
+
+          <div
+            class="collapse navbar-collapse mx-5"
+            id="navbarSupportedContent"
+          >
+            <ul
+              class="navbar-nav nav nav-underline ms-auto mb-2 mb-lg-0 justify-content-end"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="/public/#home">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/public/index.html#specials">Specials</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/public/index.html#menus">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/public/index.html#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <button type="button" id="theme-toggle" class="btn d-none d-lg-block">
+            <i class="bi bi-sun-fill"></i>
+            <i class="bi bi-moon-fill"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="">
+      <section class="orders-container" id="orders">
+        <div class="orders-heading">
+          <h2 class="sub-heading">Your Orders</h2>
+          <p>Confirm all details before placing the orders</p>
+          <span class="text-danger">⋘ ──── ∗ ⋅◈⋅ ∗ ──── ⋙</span>
+        </div>
+        <table class="mx-auto w-50 table-striped">
+          <thead>
+            <tr class="">
+              <th scope="col" class="text-start">#</th>
+              <th scope="col" class="text-start">Name</th>
+              <th scope="col" class="text-end">Price</th>
+              <th scope="col" class="text-end">Quantity</th>
+              <th scope="col" class="text-end">Total</th>
+            </tr>
+          </thead>
+          <tbody class=""></tbody>
+        </table>
+
+        <button class="order-now">Order Now!</button>
+
+        <span class="text-danger"
+          >• • • • • • • • • • ✦ • • • • • • • • • •</span
+        >
+      </section>
+    </main>
+    <footer>
+      <p class="text-center">
+        &copy; Green Fork.
+        <span id="copyright"></span>
+        All Rights Reserved.
+      </p>
+    </footer>
+  </body>
+</html>
